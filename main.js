@@ -926,6 +926,15 @@ function findProduct(taskOB){
           if ((keywordsArr.length/2) > highestMatch){
             reject(`Can't Find product`);
           }else{
+            var sizeIndex = getSize(highestMatchProduct.variants, taskOB.size);
+            if (typeof sizeIndex !== 'undefined'){
+              resolve(highestMatchProduct.variants[sizeIndex].id);
+            }else if(taskOB.type == 'none'){
+              resolve(highestMatchProduct.variants[0].id);
+            }else{
+              console.log('Size not found');
+              reject('Not Found size')
+            }
             console.log(highestMatchProduct);
           }
 
