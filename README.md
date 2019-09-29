@@ -24,3 +24,6 @@ npm i puppeteer
 # or "yarn add puppeteer"
 ```
 
+![Tux, the Linux mascot](/Images/bot_views.gif)
+
+
