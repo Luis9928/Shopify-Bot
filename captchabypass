@@ -1,0 +1,13 @@
+document.getElementByClassName('step__footer__continue-btn btn').addEventListener('captchaSuccess', function() {
+          var responseInput = document.querySelector('.g-recaptcha-response');
+          var submitButton = document.querySelector('.dialog-submit');
+
+          if (submitButton instanceof HTMLElement) {
+            var needResponse = (responseInput instanceof HTMLElement);
+            var responseValueMissing = !responseInput.value;
+            submitButton.disabled = (needResponse && responseValueMissing);
+          }
+        }, false);
+
+
+        g-recaptcha-response

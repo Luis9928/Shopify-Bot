@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div class="uk-width-expand@m" style="background-color:blue;height: 600px;" id="mainPage">
+
+			<!-- Top bar button -->
+			<div class="uk-width-1-1 uk-text-center uk-flex uk-flex-wrap uk-flex-wrap-around" style="background-color: black" uk-grid>
+				<div class="uk-margin uk-padding-small">
+            		<input style="background-color: green" id="newTask" class="uk-button uk-button-primary" type="button" value="New Task"  uk-toggle="target: #taskWin">
+           		 </div>
+
+           		 <div class="uk-margin uk-padding-small">
+            		<input style="background-color: red" id="captcha" class="uk-button uk-button-primary" type="button" value="Captcha">
+            	</div>
+			</div>
+			<!-- Top Bar end -->
+
+			<!-- Tasks pane -->
+			<div uk-height-match class="uk-width-1-1 uk-child-width-expand" style="background-color: green; min-height: 390px; max-height: 390px; overflow: scroll;" uk-grid>
+				<ul id="taskList" class="uk-list" style="background-color: black">
+					<!--Tasks are created here when page loads -->
+				</ul>
+			</div>
+			<!-- Tasks pane end -->
+
+			<!-- Tasks Controls -->
+			<div class="uk-width-1-1 uk-text-center" style="background-color: yellow ;margin-top: 15px; min-height: 9%; max-height: 9%;" uk-grid >
+				<div>
+            		<input style="background-color: green;" id="startTask" class="uk-button uk-button-primary" type="button" value="Start Tasks">
+           		 </div>
+
+           		 <div>
+            		<input style="background-color: red" id="stop" class="uk-button uk-button-primary" type="button" value="Stop Tasks">
+            	</div>
+
+            	<div>
+            		<input style="background-color: red" id="clear" class="uk-button uk-button-primary" type="button" value="Clear All">
+            	</div>
+			</div>
+			<!-- Tasks Controls end -->
+
+
+			<!-- Modal -->
+			<div id="taskWin" uk-modal>
+				<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+						<h2 class="uk-modal-title">New Task</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div class="uk-grid" uk-grid>
+
+							<!-- Site Selection -->
+							<div class="uk-width-1-3">
+								<select id="siteSelect" class="uk-select" type="button">
+									<option id="none" value="none" selected disabled>Site</option>
+									<option id="custom" value="custom">Custom Site</option>
+									<option id="bth" value = "bringtheheatbots.com">Bring the heat</option>
+									<option id="kith" value="kith.com">Kith</option>
+									<option id="deadstock" value="www.deadstock.ca">Deadstock</option>
+								</select>
+							</div>
+
+							<!-- Profile Selection-->
+							<div class="uk-width-1-3">
+								<select id="profileSelect" class="uk-select" type="button">
+									<option id="none" value="none" selected disabled>Profile</option>
+								</select>
+							</div>
+
+							<!-- Mode Selection -->
+							<div class="uk-width-1-3">
+								<select id="modeSelect" class="uk-select" type="button">
+									<option id="none" value="none" selected disabled>Mode</option>
+									<option id="keywords" value="keywords">Keywords</option>
+									<option id="url" value="url">URL</option>
+									<option id="variants" value="variants">Variants</option>
+								</select>
+							</div>
+
+
+							<!-- Keyword Selection -->
+							<div class="uk-width-1-1" style="padding-top: 15px; padding-bottom: 15px;">
+			            		<input class="uk-input" type="text" name="key" id="key" value="" placeholder="Keyword/Url/Variants">
+			           		</div>
+
+
+							<!-- Type Selection -->
+							<div class="uk-width-1-3">
+								<select id="typeSelect" class="uk-select" type="button">
+									<option id="none" value="none" selected disabled>Product Type</option>
+									<option id="none" value="none" >None</option>
+									<option id="footware" value="foot">Footware</option>
+									<option id="apparel" value="apparel">Apparel</option>
+								</select>
+							</div>
+
+
+			           		<!-- Size Selection -->
+							<div class="uk-width-1-3">
+								<select id="sizeSelect" class="uk-select" type="button">
+									<option id="none" value="none" selected disabled>Size</option>
+									<option id="none" value="none">None</option>
+								</select>
+							</div>
+
+
+							<!-- Shipping Selection -->
+							<div class="uk-width-1-3">
+								<select  id="shippingSelect" class="uk-select" type="button">
+									<option id="none" value="none" selected disabled>Shipping</option>
+								</select>
+							</div>
+
+							<!-- Captcha Selection -->
+							<div class="uk-width-1-4">
+								<label><input id="captchaRadio" class="uk-checkbox" type="checkbox">Captcha</label>
+							</div>
+
+
+							<!-- Custom Site Selection -->
+							<div class="uk-width-1-1" style="padding-top: 15px; padding-bottom: 15px;">
+			            		<input class="uk-input" type="text" name="customSite" id="customSite" value="" placeholder="Custom Site">
+			           		</div>
+
+
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+						<button class="uk-modal-close uk-button uk-button-default" type="button">Close</button>
+						<button id="saveBtn" class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
+					</div>
+				</div>
+			</div>
+			<!--Modal End -->
+
+			
+		</div>
+	</body>
+</html>

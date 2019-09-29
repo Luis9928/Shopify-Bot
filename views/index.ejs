@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <fieldset>
+      <h5> Tokens generated:   <%= tokensGen %></h5>
+    </fieldset>
+    <form action="/submit" method="post">
+      <div class="g-recaptcha" data-sitekey="6LeoeSkTAAAAAA9rkZs5oS82l69OEYjKRZAiKdaF" data-callback="sub"></div><br>
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+      <button type="submit" value="Submit" id="capbtn">Submit</button><br><br>
+    </form>
+<script>
+  function sub(){
+    document.getElementById("submit").click();
+  }
+</script>
+  </body>
+</html>
+

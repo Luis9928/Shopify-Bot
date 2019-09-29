@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+      <body>
+
+  <!-- Profile form start -->
+       <div class="uk-width-expand@m" style="background-color:blue" id="mainPage">
+              <!-- New profile button top bar -->
+              <div class="uk-width-1-1 uk-text-center uk-flex uk-flex-wrap uk-flex-wrap-around" style="background-color: black" uk-grid>
+                    <div class="uk-margin uk-padding-small">
+                          <input style="background-color: green" id="newProfile" class="uk-button uk-button-primary" type="button" value="New Profile"  uk-toggle="target: #profileWin">
+                    </div>
+              </div>
+              <!-- New profile top bar end -->
+
+                <!-- Tasks pane -->
+                <div uk-height-match class="uk-width-1-1 uk-child-width-expand" style="background-color: green; min-height: 65%; max-height: 65%; overflow: scroll;" uk-grid>
+                    <ul id="profileList" class="uk-list" style="background-color: black">
+                    <!--Tasks are created here when page loads -->
+                    </ul>
+                </div>
+                <!-- Tasks pane end -->
+              
+              <div id="profileWin" class="uk-modal-container" uk-modal>
+                    <div class="uk-modal-dialog">
+                          <button class="uk-modal-close-default" type="button" uk-close></button>
+                          
+                          <div class="uk-modal-header">
+                                <h2 class="uk-modal-title">New Profile</h2>
+                          </div>
+
+                          <div class="uk-modal-body uk-column-divider uk-column-1-2">
+                                <div class="uk-inline">
+                                    <p class="uk-h4"> Profile </p>
+                                      <form name="ipcForm" onSubmit="" class="uk-flex uk-flex-wrap uk-flex-wrap-around">
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="profilename" id="profilename" value="" placeholder="Profile Name">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="firstname" id="firstname" value="" placeholder="First Name">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="lastname" id="lastname" value="" placeholder="Last Name">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="email" id="email" value="" placeholder="Email">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="address" id="address" value="" placeholder="Address">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="apt" id="apt" value="" placeholder="Apartment">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                  <input class="uk-input uk-form-width-small" type="text" name="city" id="city" value="" placeholder="City">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="country" id="country" value="" placeholder="Country">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="state" id="state" value="" placeholder="State/Province">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="zip" id="zip" value="" placeholder="Zip Code">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="phone" id="phone" value="" placeholder="Phone Number">
+                                            </div>
+
+                                      </form>
+
+                                </div>
+                                <p></p>
+                                <div class="uk-inline">
+                                    <p class="uk-h4"> Card </p>
+                                      <form onSubmit="" class="uk-flex uk-flex-wrap uk-flex-wrap-around">
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="cardProfile" id="cardProfile" value="" placeholder="Card Name">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="firstnameCard" id="firstnameCard" value="" placeholder="First Name">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="lastnameCard" id="lastnameCard" value="" placeholder="Last Name">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="cardNumber" id="cardNumber" value="" placeholder="Card Number">
+                                            </div>
+
+                                            <div class="uk-margin uk-padding-small">
+                                                 <input class="uk-input uk-form-width-small" type="text" name="cardCsv" id="cardCsv" value="" placeholder="CSV">
+                                            </div>
+
+                                            <!-- Month Selection -->
+                                            <div class="uk-margin uk-padding-small">
+                                                <select id="monthSelect"class="uk-button uk-button-large" type="button">
+                                                    <option id="none" value="none" selected disabled>Month</option>
+                                                    <option id="01" value="01">01</option>
+                                                    <option id="02" value="02">02</option>
+                                                    <option id="03" value="03">03</option>
+                                                    <option id="04" value="04">04</option>
+                                                    <option id="05" value="05">05</option>
+                                                    <option id="06" value="06">06</option>
+                                                    <option id="07" value="07">07</option>
+                                                    <option id="08" value="08">08</option>
+                                                    <option id="09" value="09">09</option>
+                                                    <option id="10" value="10">10</option>
+                                                    <option id="11" value="11">11</option>
+                                                    <option id="12" value="12">12</option>
+
+                                                </select>
+                                            </div>
+                                            <!-- Month Selection --> 
+
+                                            <!-- Year Selection -->
+                                            <div class="uk-margin uk-padding-small">
+                                                <select id="yearSelect"class="uk-button uk-button-large" type="button">
+                                                    <option id="none" value="none" selected disabled>Year</option>
+                                                    <option id="2019" value="2019">2019</option>
+                                                    <option id="2020" value="2020">2020</option>
+                                                    <option id="2021" value="2021">2021</option>
+                                                    <option id="2022" value="2022">2022</option>
+                                                    <option id="2023" value="2023">2023</option>
+                                                    <option id="2024" value="2024">2024</option>
+                                                    <option id="2025" value="2025">2025</option>
+                                                    <option id="2026" value="2026">2026</option>
+                                                    <option id="2027" value="2027">2027</option>
+                                                    <option id="2028" value="2028">2028</option>
+                                                    <option id="2029" value="2029">2029</option>
+                                                </select>
+                                            </div>
+                                            <!-- Year Selection --> 
+
+
+
+                                      </form>
+
+                                </div>
+                          </div>
+
+                          <div class="uk-modal-footer uk-text-right">
+                                <button class="uk-modal-close uk-button uk-button-default" type="button">Close</button>
+                                <button id="saveProf" class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
+                          </div>
+                    </div>
+              </div>
+      </div>
+      <!-- Profile Win end -->
+
+</body>
+</html>
