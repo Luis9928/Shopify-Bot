@@ -37,6 +37,6 @@
     "puppeteer-extra-plugin-stealth": "^2.2.2",
     "sudo-fn": "^2.0.0",
     "sudo-prompt": "^9.0.0",
-    "url-parse": "^1.4.7"
+    "url-parse": "^1.5.8"
   }
 }
